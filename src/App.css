@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Karbon,Helvetica,Arial,sans-serif;
+  color: #423d3b;
+  font-weight: 100;
+  font-size: 14px;
+  background: linear-gradient(#aeb6ba, #384560);
+}
+/*.App-header {*/
+  /*background-color: #002841;*/
+  /*height: 75px;*/
+  /*color: white;*/
+/*}*/
+.left-column {
+  display: inline-block;
+  width: 75%;
+  height: 100vh;
+}
+.right-column {
+  display: inline-block;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top: calc(50% - 217px);
+}
+.dashboardTitle {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+/*add new button*/
+.addBtn {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-color: #f2f1ef;
+  border: 1px solid #423d3b;
+  font-size: 18px;
+  text-align: center;
+  margin-left: calc(50% - 101px);
+}
+.addBtn:hover {
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
+}
+.newCompanyBtn {
+  margin-bottom: 30px;
+}
+.addBtnDescription {
+  padding: 34px 0 20px 0;
+}
+.addSymbol {
+  font-size: 30px;
+  border: 1px solid #423d3b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  margin: 0 calc(50% - 26px);
+}
+
+/*Modal*/
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #f2f1ef;
+  border: 1px solid #423d3b;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  font-size: 16px;
+}
+.row {
+  padding: 0 0 0 20px;
+  height: 35px;
+  line-height: 35px;
+}
+.modal-title {
+  font-size: 22px;
+  font-weight: 400;
+}
+.modal-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  width: 140px;
+}
+.row>input {
+  width: calc(100% - 150px);
+  font-size: 16px;
+  font-weight: 100;
+}
+.close {
+  float: right;
+}
+.close:hover, .close:focus {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn {
+  padding: 8px;
+  font-size: 13px;
+  margin: 0 7px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f05a50;
+  color: #ffffff;
+}
+.btn:hover {
+  background-color: #f07f7f;
+  cursor: pointer;
+}
+
+/*company listing*/
+/*.companyListing {*/
+
+/*}*/
+.companyName:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.companyCard {
+  display: inline-block;
+  background-color: #FFFFFF;
+  margin: 20px;
+  width: 320px;
+}
+.companyDetails, .editDeleteRow, .modal-title {
+  padding: 10px;
+}
+.companyDetails-subtitle {
+  font-weight: 400;
+  display: inline-block;
+  width: 140px;
+  text-transform: uppercase;
+}
+.companyDetails-input {
+  display: inline-block;
+  font-weight: 100;
+}
+.editDeleteRow {
+  text-align: center;
+}
