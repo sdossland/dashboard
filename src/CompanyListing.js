@@ -3,29 +3,39 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as api from './apiHelper';
 
 class CompanyListing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      companies: [],
+      loaded: false
+    }
+  }
+  componentDidMount() {
+    api.getAllCompanies().then((companies) => {
+      this.setState({ companies, loaded: true })
+    });
+  }
   render() {
-    console.log('rendered!');
-    var companyList = this.props.data.map((company, key) => {
+    var companyList = this.state.companies.map((company) => {
         return (
-          <Link to={`/company/${key}`} key={key}>
-            <p>{company.companyName}</p>
+          <Link to={`/company/${company._id}`} key={company._id}>
+            <p className="companyListName">{company.name}</p>
           </Link>
-          //<Company key={key} company={company} deleteCompany={this.props.getDeleteCompany(key)} /*onClickHandler={this.onClickHandler}*/ />
         )
     });
 
-    return (
+    return this.state.loaded ? (
       <div>
-        <p className="dashboardTitle">Companies</p>
+        <p className="companyTitle">Companies</p>
         <hr />
-        <br />
         <div className="companyListing">
           {companyList}
         </div>
       </div>
-    )
+    ) : <div>LOADING...</div>
   }
 }
 

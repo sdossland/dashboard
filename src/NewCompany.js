@@ -3,12 +3,14 @@
  */
 import React from 'react';
 import NewCompanyModal from './NewCompanyModal';
+import * as api from './apiHelper';
 
 class NewCompany extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      company: {}
     };
   }
   openModal = () => {
@@ -18,6 +20,9 @@ class NewCompany extends React.Component {
     if (e) e.preventDefault();
     this.setState({showModal: false})
   };
+
+  addCompany = (company) => api.addCompany(company);
+
   render() {
     return (
       <div>
@@ -25,7 +30,7 @@ class NewCompany extends React.Component {
           <p className="addBtnDescription">Create new company</p>
           <div className="addSymbol">+</div>
         </div>
-        {this.state.showModal && <NewCompanyModal addCompany={this.props.addCompany} closeModal={this.closeModal} />}
+        {this.state.showModal && <NewCompanyModal addCompany={this.addCompany} closeModal={this.closeModal} />}
       </div>
     );
   }

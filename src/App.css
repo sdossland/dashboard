@@ -8,29 +8,54 @@ body {
   font-weight: 100;
   font-size: 14px;
   background: linear-gradient(#aeb6ba, #384560);
+  background-size: auto;
 }
-/*.App-header {*/
-  /*background-color: #002841;*/
-  /*height: 75px;*/
-  /*color: white;*/
-/*}*/
+.App-header {
+  background-color: #002841;
+  height: 75px;
+  line-height: 75px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 500;
+  padding-left: 20px;
+}
 .left-column {
   display: inline-block;
   width: 75%;
-  height: 100vh;
+  /*height: 100vh;*/
+  padding-left: 20px;
 }
 .right-column {
   display: inline-block;
   width: 25%;
-  height: 100vh;
-  position: fixed;
-  top: calc(50% - 217px);
+  /*height: 100vh;*/
+  position: absolute;
+  /*top: calc(50% - 217px);*/
 }
-.dashboardTitle {
+.companyTitle {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 26px;
+  padding: 40px 0 5px 0;
 }
-
+.companyListing, .peopleList {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.companyListName {
+  line-height: 30px;
+  font-size: 18px;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover, .person:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.seePeople:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 /*add new button*/
 .addBtn {
   display: inline-block;
@@ -73,6 +98,7 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
 }
 /* Modal Content/Box */
 .modal-content {
@@ -104,7 +130,7 @@ body {
   font-weight: 100;
 }
 .close {
-  float: right;
+  float: right !important;
 }
 .close:hover, .close:focus {
   font-weight: bold;
@@ -125,31 +151,22 @@ body {
   background-color: #f07f7f;
   cursor: pointer;
 }
-
-/*company listing*/
-/*.companyListing {*/
-
-/*}*/
-.companyName:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
 .companyCard {
   display: inline-block;
   background-color: #FFFFFF;
   margin: 20px;
-  width: 320px;
+  width: 620px;
 }
 .companyDetails, .editDeleteRow, .modal-title {
   padding: 10px;
 }
-.companyDetails-subtitle {
+.companyDetails-subtitle, .personDetails-subtitle {
   font-weight: 400;
   display: inline-block;
   width: 140px;
   text-transform: uppercase;
 }
-.companyDetails-input {
+.companyDetails-input, .personDetails-input {
   display: inline-block;
   font-weight: 100;
 }
