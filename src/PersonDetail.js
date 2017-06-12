@@ -22,14 +22,19 @@ class PersonDetail extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="row-spacing">
+      <div className="row">
+        <div className="col-sm-12">
+        <div className="row row-spacing">
           <p className="personDetails-subtitle">Email</p>
           <p className="personDetails-input">{this.props.person.email}</p>
         </div>
-        <div className="editDeleteRow">
-          <button className="btn" onClick={this.props.deletePerson}>Delete Person</button>
-          <button className="btn" onClick={this.openModal}>Edit Person</button>
+        <div className="editDeleteRow row">
+          <div className="col-xs-6 col-md-4 col-sm-offset-0 col-md-offset-2">
+            <button className="btn" onClick={this.props.deletePerson}>Delete Person</button>
+          </div>
+          <div className="col-xs-6 col-md-4">
+            <button className="btn" onClick={this.openModal}>Edit Person</button>
+          </div>
           {this.state.showModal &&
             <PersonModal
               closeModal={this.closeModal}
@@ -40,6 +45,7 @@ class PersonDetail extends React.Component {
           }
         </div>
         <hr />
+        </div>
       </div>
     )
   }

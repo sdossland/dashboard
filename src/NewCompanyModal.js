@@ -40,26 +40,38 @@ class NewCompanyModal extends React.Component {
           <p className="modal-title">{ this.props.editCompany ? 'Edit Company' : 'New Company' }</p>
           <hr />
           <br />
-          <div className="row-spacing">
-            <p className="modal-subtitle">Name</p>
-            <input type="text" placeholder="Name of company" value={this.state.name} onChange={this.getOnChange('name')} />
+          <div className="row row-spacing">
+            <p className="modal-subtitle col-md-4">Name</p>
+            <div className="col-md-8">
+              <input type="text" placeholder="Name of company" value={this.state.name} onChange={this.getOnChange('name')} />
+            </div>
           </div>
-          <div className="row-spacing">
-            <p className="modal-subtitle">Address</p>
-            <input type="text" placeholder="Address" value={this.state.address} onChange={this.getOnChange('address')} />
+          <div className="row row-spacing">
+            <p className="modal-subtitle col-md-4">Address</p>
+            <div className="col-md-8">
+              <input type="text" placeholder="Address" value={this.state.address} onChange={this.getOnChange('address')} />
+            </div>
           </div>
-          <div className="row-spacing">
-            <p className="modal-subtitle">Revenue</p>
-            <input type="text" placeholder="Revenue" value={this.state.revenue} onChange={this.getOnChange('revenue')} />
+          <div className="row row-spacing">
+            <p className="modal-subtitle col-md-4">Revenue</p>
+            <div className="col-md-8">
+              <input type="text" placeholder="Revenue" value={this.state.revenue} onChange={this.getOnChange('revenue')} />
+            </div>
           </div>
-          <div className="row-spacing">
-            <p className="modal-subtitle">Phone number</p>
-            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="###-###-####" value={this.state.phone} onChange={this.getOnChange('phone')} />
+          <div className="row row-spacing">
+            <p className="modal-subtitle col-md-4">Phone number</p>
+            <div className="col-md-8">
+              <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="###-###-####" value={this.state.phone} onChange={this.getOnChange('phone')} />
+            </div>
           </div>
           <br />
-          <div>
-            <button className="btn saveBtn" onClick={this.onSave}>Save</button>
-            <button className="btn closeBtn" onClick={this.props.closeModal}>Close</button>
+          <div className="row">
+            <div className="col-sm-6 col-md-2">
+              <button className="btn saveBtn" onClick={this.onSave}>Save</button>
+            </div>
+            <div className="col-sm-6 col-md-2">
+              <button className="btn closeBtn" onClick={this.props.closeModal}>Close</button>
+            </div>
           </div>
         </div>
       </div>

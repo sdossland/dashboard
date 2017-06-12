@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 body {
   font-family: Karbon,Helvetica,Arial,sans-serif;
   color: #423d3b;
@@ -16,7 +12,6 @@ body {
   color: #ffffff;
   font-size: 30px;
   font-weight: 500;
-  padding-left: 20px;
 }
 .addBtns {
   padding-top: 40px;
@@ -95,12 +90,14 @@ a:hover, .person:hover {
   border: 1px solid #423d3b;
   margin: 10% auto;
   padding: 20px;
-  width: 50%;
   font-size: 16px;
+  max-width: 700px;
+}
+.modal-content .btn {
+  width: 100%;
+  margin-bottom: 1em;
 }
 .row-spacing {
-  padding: 0 0 0 20px;
-  height: 35px;
   line-height: 35px;
 }
 .modal-title {
@@ -108,15 +105,14 @@ a:hover, .person:hover {
   font-weight: 400;
 }
 .modal-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
-  display: inline-block;
-  width: 140px;
 }
-.row-spacing>input {
-  width: calc(100% - 150px);
+.row-spacing input, select {
   font-size: 16px;
   font-weight: 100;
+  width: 100%;
+  display: inline;
 }
 .close {
   float: right !important;
@@ -130,7 +126,6 @@ a:hover, .person:hover {
 .btn {
   padding: 8px;
   font-size: 13px;
-  margin: 0 7px;
   border-radius: 5px;
   border: none;
   background-color: #f05a50;
@@ -143,8 +138,7 @@ a:hover, .person:hover {
 .companyCard {
   display: inline-block;
   background-color: #FFFFFF;
-  margin: 20px;
-  width: 620px;
+  width: 100%;
 }
 .companyDetails, .editDeleteRow, .modal-title {
   padding: 10px;
@@ -156,9 +150,11 @@ a:hover, .person:hover {
   text-transform: uppercase;
 }
 .companyDetails-input, .personDetails-input {
-  display: inline-block;
   font-weight: 100;
 }
 .editDeleteRow {
   text-align: center;
+}
+.editDeleteRow .btn {
+  margin-bottom: 1em;
 }

@@ -39,31 +39,47 @@ class PersonModal extends React.Component {
     console.log(this.props.person);
     return (
     <div id="personModal" className="modal" onClick={this.handleOutsideClick}>
-      <div className="modal-content">
-        <span className="close" onClick={this.props.closeModal}>x</span>
-        <p className="modal-title">{ this.props.editPerson ? 'Edit Person' : 'New Person' }</p>
-        <hr />
+      <div className="modal-content row">
+        <div className="col-sm-12">
+        <div className="row">
+          <div className="col-sm-12">
+            <span className="close" onClick={this.props.closeModal}>x</span>
+            <p className="modal-title">{ this.props.editPerson ? 'Edit Person' : 'New Person' }</p>
+            <hr />
+            <br />
+          </div>
+        </div>
+        <div className="row row-spacing">
+          <div className="modal-subtitle col-md-4">Name</div>
+          <div className="col-md-8">
+            <input type="text" placeholder="Name of person" value={this.state.name} onChange={this.getOnChange('name')} />
+          </div>
+        </div>
+        <div className="row row-spacing">
+          <div className="modal-subtitle col-md-4">Email</div>
+          <div className="col-md-8">
+            <input type="text" placeholder="Email" value={this.state.email} onChange={this.getOnChange('email')} />
+          </div>
+          </div>
+        <div className="row row-spacing">
+          <div className="modal-subtitle col-md-4">Company</div>
+          <div className="col-md-8">
+            <select defaultValue={this.props.person ? this.props.person.companyId : undefined} onChange={this.getOnChange('companyId')}>
+              <option defaultValue="Please select...">Please select...</option>
+              {companyNames}
+            </select>
+          </div>
+        </div>
         <br />
-        <div className="row-spacing">
-          <p className="modal-subtitle">Name</p>
-          <input type="text" placeholder="Name of person" value={this.state.name} onChange={this.getOnChange('name')} />
-        </div>
-        <div className="row-spacing">
-          <p className="modal-subtitle">Email</p>
-          <input type="text" placeholder="Email" value={this.state.email} onChange={this.getOnChange('email')} />
-        </div>
-        <div className="row-spacing">
-          <p className="modal-subtitle">Company</p>
-          <select defaultValue={this.props.person ? this.props.person.companyId : undefined} onChange={this.getOnChange('companyId')}>
-            <option defaultValue="Please select...">Please select...</option>
-            {companyNames}
-          </select>
-        </div>
-        <br />
-        <div>
-          <button className="btn saveBtn" onClick={this.onSave}>Save</button>
-          <button className="btn closeBtn" onClick={this.props.closeModal}>Close</button>
-        </div>
+          <div className="row">
+            <div className="col-sm-6 col-md-2">
+              <button className="btn saveBtn" onClick={this.onSave}>Save</button>
+            </div>
+            <div className="col-sm-6 col-md-2">
+              <button className="btn closeBtn" onClick={this.props.closeModal}>Close</button>
+            </div>
+          </div>
+      </div>
       </div>
     </div>
     )
