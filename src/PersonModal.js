@@ -44,15 +44,15 @@ class PersonModal extends React.Component {
         <p className="modal-title">{ this.props.editPerson ? 'Edit Person' : 'New Person' }</p>
         <hr />
         <br />
-        <div className="row">
+        <div className="row-spacing">
           <p className="modal-subtitle">Name</p>
           <input type="text" placeholder="Name of person" value={this.state.name} onChange={this.getOnChange('name')} />
         </div>
-        <div className="row">
+        <div className="row-spacing">
           <p className="modal-subtitle">Email</p>
           <input type="text" placeholder="Email" value={this.state.email} onChange={this.getOnChange('email')} />
         </div>
-        <div className="row">
+        <div className="row-spacing">
           <p className="modal-subtitle">Company</p>
           <select defaultValue={this.props.person ? this.props.person.companyId : undefined} onChange={this.getOnChange('companyId')}>
             <option defaultValue="Please select...">Please select...</option>

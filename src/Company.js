@@ -70,18 +70,18 @@ class Company extends React.Component {
         <p className="modal-title">{company.name}</p>
         <hr />
         <div className="companyDetails">
-          <div className="row">
+          <div className="row-spacing">
             <p>{company.address}</p>
           </div>
-          <div className="row">
+          <div className="row-spacing">
             <p className="companyDetails-subtitle">Revenue</p>
             <p className="companyDetails-input">{company.revenue}</p>
           </div>
-          <div className="row">
+          <div className="row-spacing">
             <p className="companyDetails-subtitle">Phone number</p>
             <p className="companyDetails-input">{company.phone}</p>
           </div>
-          <p className="seePeople row" onClick={this.toggleListOfPeople}>{this.state.showListText}</p>
+          <p className="seePeople row-spacing" onClick={this.toggleListOfPeople}>{this.state.showListText}</p>
           {this.state.showListOfPeople && <ListOfPeople people={people} getDeletePerson={this.getDeletePerson} getEditPerson={this.getEditPerson} companies={this.state.companies} />}
         </div>
         <hr />

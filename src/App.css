@@ -7,8 +7,7 @@ body {
   color: #423d3b;
   font-weight: 100;
   font-size: 14px;
-  background: linear-gradient(#aeb6ba, #384560);
-  background-size: auto;
+  background: #384560;
 }
 .App-header {
   background-color: #002841;
@@ -19,18 +18,8 @@ body {
   font-weight: 500;
   padding-left: 20px;
 }
-.left-column {
-  display: inline-block;
-  width: 75%;
-  /*height: 100vh;*/
-  padding-left: 20px;
-}
-.right-column {
-  display: inline-block;
-  width: 25%;
-  /*height: 100vh;*/
-  position: absolute;
-  /*top: calc(50% - 217px);*/
+.addBtns {
+  padding-top: 40px;
 }
 .companyTitle {
   color: #ffffff;
@@ -109,7 +98,7 @@ a:hover, .person:hover {
   width: 50%;
   font-size: 16px;
 }
-.row {
+.row-spacing {
   padding: 0 0 0 20px;
   height: 35px;
   line-height: 35px;
@@ -124,7 +113,7 @@ a:hover, .person:hover {
   display: inline-block;
   width: 140px;
 }
-.row>input {
+.row-spacing>input {
   width: calc(100% - 150px);
   font-size: 16px;
   font-weight: 100;

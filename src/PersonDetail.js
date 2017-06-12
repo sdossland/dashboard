@@ -23,7 +23,7 @@ class PersonDetail extends React.Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="row-spacing">
           <p className="personDetails-subtitle">Email</p>
           <p className="personDetails-input">{this.props.person.email}</p>
         </div>

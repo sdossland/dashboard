@@ -8,17 +8,18 @@ import CompanyListing from './CompanyListing';
 import NewCompany from './NewCompany';
 import Company from './Company';
 import NewPerson from './NewPerson';
+import './grid.css';
 import './App.css';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="App-header">
+        <div className="App-header row">
           <p className="dashboardTitle">DASHBOARD</p>
         </div>
-        <div className="app">
-          <div className="left-column" /*Col md={8} sm={12}*/>
+        <div className="app row">
+          <div className="col-md-8">
             <Router>
               <div>
                 <Route exact path="/" render={() => <Redirect to="/company"/>} />
@@ -34,7 +35,7 @@ class App extends React.Component {
               </div>
             </Router>
           </div>
-          <div className="right-column" /*Col md={4} sm={12}*/ >
+          <div className="col-md-4 addBtns" >
             <NewCompany />
             <NewPerson />
           </div>
